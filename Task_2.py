@@ -1,27 +1,11 @@
 # Задание 2: Дан список, вывести отдельно буквы и цифры, пользуясь filter.
 
-lst = [12,'sadf',5643]
-
-from random import randint
-
-def create_string():
-    symbols = 'qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM'
-    text = ''
-    for _ in range (randint(1, 8)):
-        text += symbols[randint(0, 51)]
-    return text
+lst = [12,'sadf',5643, 'sgsgs']
 
 def separate_by_elements(lst):
     result = []
     result.append(list(filter(lambda i: str(i).isalpha(), lst)))
     result.append(list(filter(lambda i: str(i).isdigit(), lst)))
     return result
-
-def create_list(length):
-    lst = []
-    for _ in range(length):
-        rand = randint(0, 1)
-        lst.append(randint(0, 9999) if rand == 0 else create_string())
-    return 
 
 print(f'Отсортированный массив: {separate_by_elements(lst)}')
