@@ -24,4 +24,4 @@ def create_list(length):
         lst.append(randint(0, 9999) if rand == 0 else create_string())
     return 
 
-print(separate_by_elements(lst))
+print(f'Отсортированный массив: {separate_by_elements(lst)}')
